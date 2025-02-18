@@ -1,0 +1,15 @@
+<header>
+  <ul>
+    <li><button (click)="navigateTo('/home')">Home</button></li>
+    <li><button (click)="navigateTo('/about')">About</button></li>
+    <li><button (click)="navigateTo('/aboutdd')">Content</button></li>
+    <!-- <li><a routerLink="home/home/1" href="#">Home</a></li>
+    <li><a routerLink="/content/1" routerLinkActive="active">Content</a></li> -->
+  </ul>
+</header>
+
+<main>
+  <router-outlet />
+</main>
+
+<footer>Footer</footer>

@@ -1,0 +1,9 @@
+<div class="l-img-r-txt-container">
+  <div class="image-container">
+    <img [src]="'/images/' + data.imageUrl" [alt]="data.imageAlt" *ngIf="data.imageUrl" />
+  </div>
+  <div class="text-container">
+    <h2 class="title">{{ data.title }}</h2>
+    <p class="description">{{ data.description }}</p>
+  </div>
+</div>

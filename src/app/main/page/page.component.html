@@ -1,1 +1,7 @@
-<p>page works!</p>
+{{title}}
+<div style="display: flex;">
+  <div *ngFor="let item of limgRtxtData">
+    <app-l-img-r-txt [data]="item"></app-l-img-r-txt>
+  </div>
+</div>
+

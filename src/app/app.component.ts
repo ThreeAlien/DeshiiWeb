@@ -1,8 +1,8 @@
 import { Component, Inject, NgZone, OnInit } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { MenuService } from './common/services/menu.service';
+import { MenuService } from '@common/services/menu.service';
 import { catchError, map, tap, timer } from 'rxjs';
-import { MenuItem } from './common/interface/menu/menuModel';
+import { MenuItem } from '@common/interface/menu/menuModel';
 
 @Component({
   selector: 'app-root',

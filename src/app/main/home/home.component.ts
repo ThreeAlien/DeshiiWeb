@@ -3,7 +3,7 @@ import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { MenuService } from '../../common/services/menu.service';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
-import { MenuItem } from '../../common/interface/menu/menuModel';
+import { MenuItem } from '../../common/interface/menuModel';
 import { CommonModule } from '@angular/common';
 import { PageComponent } from '../page/page.component';
 

@@ -3,8 +3,8 @@ import { Router, Routes } from '@angular/router';
 import { BehaviorSubject, catchError, map, Observable, of, shareReplay, skipWhile, tap, throwError } from 'rxjs';
 
 import { HttpClient } from '@angular/common/http';
-import { MenuItem } from '../interface/menu/menuModel';
-import { BaseResponse } from '../interface/share/shareModel';
+import { MenuItem } from '../interface/menuModel';
+import { BaseResponse } from '../interface/shareModel';
 
 
 

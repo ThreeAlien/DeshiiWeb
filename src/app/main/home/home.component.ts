@@ -1,11 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { MenuService } from '../../common/services/menu.service';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
-import { MenuItem } from '../../common/interface/menu/menuModel';
 import { CommonModule } from '@angular/common';
-import { PageComponent } from '../page/page.component';
+import { MenuItem } from '../../common/interface/menu/menuModel';
 
 
 @Component({

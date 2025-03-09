@@ -3,7 +3,7 @@ name: Build and Push Angular Docker Image
 on:
   push:
     branches:
-      - master
+      - dockerfileTest
 
 jobs:
   build:
@@ -17,7 +17,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-
+      - name: 列出所有目錄和檔案
+        run: ls -R
       - name: 安裝 Angular 依賴並建構
         run: |
           npm install -g @angular/cli

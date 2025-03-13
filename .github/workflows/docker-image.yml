@@ -25,7 +25,7 @@ jobs:
           npm install
           ng build 
       - name: Log in to Docker Hub
-        run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
+        run: echo "${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
 
       - name: 建立 Docker 映像
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/DeshiiWeb:latest .

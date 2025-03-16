@@ -8,7 +8,7 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 
 # 複製 Angular 編譯後的文件到 Nginx 目錄
-COPY dist/my-angular-app /usr/share/nginx/html
+COPY dist/deshii-web /usr/share/nginx/html
 
 # 複製 Nginx 設定檔（可選）
 COPY nginx.conf /etc/nginx/conf.d/default.conf

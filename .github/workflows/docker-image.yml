@@ -32,3 +32,26 @@ jobs:
 
       - name: 推送到 Docker Hub
         run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/deshiiweb:latest
+  deploy:
+      runs-on: self-hosted  # 讓 GitHub Actions 在 Windows 10 自架 Runner 執行
+      needs: build
+      steps:
+        - name: Pull Latest Docker Image
+          run: docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/deshiiweb:latest
+
+        - name: Remove Old Container (If Exists)
+          shell: powershell
+          run: |
+            if (docker ps -a -q -f name=deshiiweb) {
+              docker rm -f deshiiweb
+            } else {
+              Write-Output "No existing container"
+
+        - name: Run New Docker Container
+          shell: powershell
+          run: |
+            docker run -d -p 4200:80 --restart unless-stopped --name deshiiweb ${{ secrets.DOCKER_HUB_USERNAME }}/deshiiweb:latest
+
+        - name: Cleanup Unused Docker Images
+          shell: powershell
+          run: docker image prune -f

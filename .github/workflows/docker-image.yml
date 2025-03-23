@@ -54,4 +54,4 @@ jobs:
 
         - name: Cleanup Unused Docker Images
           shell: powershell
-          run: docker image prune -f
+          run: docker image prune -f 

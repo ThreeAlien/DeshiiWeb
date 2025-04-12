@@ -11,7 +11,7 @@ RUN rm -rf ./*
 COPY dist/deshii-web /usr/share/nginx/html
 
 # 複製 Nginx 設定檔（可選）
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf 
 
 # Expose port 80
 EXPOSE 80

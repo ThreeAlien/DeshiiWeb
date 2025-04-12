@@ -6,7 +6,7 @@ WORKDIR /usr/share/nginx/html
 
 # 清除預設的 Nginx 靜態文件
 RUN rm -rf ./*
-
+ 
 # 複製 Angular 編譯後的文件到 Nginx 目錄
 COPY dist/deshii-web /usr/share/nginx/html
 

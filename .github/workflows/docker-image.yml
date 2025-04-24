@@ -50,7 +50,7 @@ jobs:
         - name: Run New Docker Container
           shell: powershell
           run: |
-            docker run -d -p 8080:80 --restart unless-stopped --name deshiiweb ${{ secrets.DOCKER_HUB_USERNAME }}/deshiiweb:latest
+            docker run -d -p 3000:80 --restart unless-stopped --name deshiiweb ${{ secrets.DOCKER_HUB_USERNAME }}/deshiiweb:latest
 
         - name: Cleanup Unused Docker Images
           shell: powershell
